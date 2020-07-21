@@ -194,7 +194,6 @@ class WaveNet(nn.Module):
 
         if c is not None and self.upsample_net is not None:
             c = self.upsample_net(c)
-            print(c.size(-1), x.size(-1))
             assert c.size(-1) == x.size(-1)
 
         # Feed data to network
